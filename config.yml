@@ -1,26 +1,26 @@
 ---
-book_repo: docs-book
-layout_repo: docs-layout
+book_repo: pivotal-cf/docs-pcf-install
+layout_repo: pivotal-cf/docs-layout-repo
 
 broken_link_exclusions: iefix|arrowhead
 repo_link_enabled: true
 
-pcf_header: &local_pcf
-  use_local_header: true
-  latest_stable_version: 1.7
-  changelog_href: http://docs.pivotal.io/pivotalcf/pcf-release-notes/
-  local_header_img: /images/cloud_rings.png
-  local_header_title: Pivotal Cloud Foundry
-public_host: hello
-
-sections:
-  - repository:
-      name: docs-content
-    directory: myservice
-    subnav_template: myservice_subnav.erb       
+- repository:
+    name: pivotal-cf/docs-pcf-install
+    ref: 'srt'
+  directory: srt
+  subnav_template: srt_subnav.erb
+  product_info:
+    use_local_header: true
+    latest_stable_version: 1.12
+    local_header_img: /images/cloud_rings.png
+    local_header_title: SRT
+    search_placeholder: Search SRT
+    url_prefix: srt
+    local_product_version: 1.12
+    local_header_links: []
+    local_header_version_list: 
 
 template_variables:                             # optional
 
-book_title: Partner Services Template
-book_repo: docs-book
-layout_repo: docs-layout
+book_title: SRT
