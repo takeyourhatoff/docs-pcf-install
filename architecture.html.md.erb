@@ -5,32 +5,53 @@ owner: Releng
 
 ## <a id='controlvm'></a>Control VM
 
-diego_database
-uaa
-cloud_controller
-clock_global
-cloud_controller_worker
-diego_brain
-loggregator_trafficcontroller
-syslog_adapter
-doppler 
-syslog_scheduler
+Diego BBS
+UAA
+Diego Brain
+Cloud Controller
+Clock Global
+Cloud Controller Worker
+Doppler Server
+Loggregator Traficcontroller
+Syslog Adapter
+Syslog Scheduler
 
 ## <a id='dbvm'></a>Database VM
 
-Nats
-Mysql_proxy
-Mysql
-consul_server
+NATS
+MySQL Proxy
+MySQL Server
+Consul
 
 ## <a id='computevm'></a>Compute VM
 
-diego_cell
+Diego Cell
 
 ## <a id='computevm'></a>Blobstore VM
 
-nfs_server
+File Storage
 
 ## <a id='router'></a>Router VM
 
+Router
+
 ## <a id='haproxy'></a> (Optional) HAProxy VM
+
+HAProxy
+
+-----------------------------------
+
+Backup Prepare Node
+MySQL Monitor
+TCP Router
+
+Smoke Test Errand
+Apps Manager Errand
+Notifications Errand
+Notifications UI Errand
+Pivotal Account Errand
+Autoscaling Errand
+Autoscaling Registration Errand
+NFS Broker Errand
+MySQL Bootstrap Errand
+MySQL Rejoin Unsafe Errand
