@@ -2,3 +2,35 @@
 title: Product Architecture for Small Footprint Elastic Runtime
 owner: Releng
 ---
+
+## <a id='controlvm'></a>Control VM
+
+diego_database
+uaa
+cloud_controller
+clock_global
+cloud_controller_worker
+diego_brain
+loggregator_trafficcontroller
+syslog_adapter
+doppler 
+syslog_scheduler
+
+## <a id='dbvm'></a>Database VM
+
+Nats
+Mysql_proxy
+Mysql
+consul_server
+
+## <a id='computevm'></a>Compute VM
+
+diego_cell
+
+## <a id='computevm'></a>Blobstore VM
+
+nfs_server
+
+## <a id='router'></a>Router VM
+
+## <a id='haproxy'></a> (Optional) HAProxy VM
