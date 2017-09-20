@@ -18,16 +18,29 @@ owner: releng
 The Small Footprint Elastic Runtime for PCF tile is currently in development and not yet available.
 </p>
 
-This documentation describes the Small Footprint Elastic Runtime for Pivotal Cloud Foundry (PCF). 
+This documentation describes the Small Footprint Elastic Runtime tile for Pivotal Cloud Foundry (PCF). 
 
 ## <a id='overview'></a>Overview
 
+A standard, highly available Elastic Runtime deployment has over 30 VMs and  requires [50 or more instances](docs.pivotal.io/pivotalcf/1-12/customizing/aws.html#aws). Some resource-constrained environments that run smaller workloads can benefit from an Elastic Runtime deployment with a minimal footprint. The Small Footprint Elastic Runtime tile condenses the required jobs onto only four VMs. 
+
+See the sections below for a list of [use cases](#usecase) and links to [additional documentation](#docs). 
 
 ## <a id='usecase'></a>Use Cases
 
-## <a id='docs'></a>Operator Guide 
+The Small Footprint Elastic Runtime tile satisfies the following use cases:
 
-For information on installing and operating the Small Footprint Elastic Runtime tile, see the followint topics: 
+* **Small on-premise installations**: You want to run PCF in a small data center or other resource-constrained environment.
+* **Proof-of-concept installations**: You want to deploy PCF quickly and with a small footprint for evaluation or testing purposes. 
+* **Service tile R&D**: You develop a service tile for PCF and you want to test it against Small Footprint Elastic Runtime instead of a standard Elastic Runtime deployment. 
+
+The Small Footprint Elastic Runtime tile is not recommended for most production deployments. The tile has significant performance and capacity restraints. A standard Elastic Runtime deployment is better equipped to handle production workloads and scale to meet your needs. 
+
+## <a id='docs'></a>Documentation
+
+For information on installing and operating the Small Footprint Elastic Runtime tile, see the following topics: 
+
+<p class="note"><strong>Note</strong>: While the following topics are specific to Small Footprint Elastic Runtime, almost all of the existing documentation for a standard Elastic Runtime deployment is also applicable to Small Footprint Elastic Runtime.</p>
 
 * [Product Architecture](./architecture.html)
 * [Installing](./installing.html)
