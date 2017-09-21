@@ -5,6 +5,8 @@ owner: Releng
 
 This topic describes the component VMs included in the Pivotal Cloud Foundry (PCF) Small Footprint Elastic Runtime tile, as well as the processes that run on each VM. 
 
+For more information about the components mentioned on this page, see [Cloud Foundry Components](../concepts/architecture.html). 
+
 ## <a id='overview'></a>Overview
 
 You can deploy the Small Footprint Elastic Runtime tile with a minimum of four VMs, listed in the left column of the table below. Optionally, you can deploy the additional VMs in the right column. 
@@ -36,10 +38,7 @@ You can deploy the Small Footprint Elastic Runtime tile with a minimum of four V
 		</td>
 	</tr>
 </table>
-<sup><b>*</b></sup>These VMs include co-located jobs that normally run on a single VM in Elastic Runtime. 
-
-
-See the sections below for more information about the processes that run on each VM. 
+<sup><b>*</b></sup>These VMs include co-located jobs that normally run on a single VM in Elastic Runtime. See the next section for information on which jobs run on which VM.  
 
 
 ## <a id='vms'></a>VMs with Co-located Jobs
@@ -47,6 +46,7 @@ See the sections below for more information about the processes that run on each
 To reduce the amount of VMs necessary for Small Footprint Elastic Runtime, the tile co-locates jobs many onto _Control_ and _Database_ VMs. 
 
 ### <a id='controlvm'></a>Control
+
 
 * Diego BBS
 * UAA
