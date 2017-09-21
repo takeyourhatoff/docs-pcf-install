@@ -3,24 +3,40 @@ title: Product Architecture for Small Footprint Elastic Runtime
 owner: Releng
 ---
 
-## <a id='vms'></a>VMs
+This topic describes the component VMs included in the Pivotal Cloud Foundry (PCF) Small Footprint Elastic Runtime tile, as well as the processes that run on each VM. 
 
-The Small Footprint Elastic Runtime tile can deploy with a minimum of the following four VMs:
+## <a id='overview'></a>Overview
 
-<p class="note"><strong>Note</strong>: The following list assumes that you are using an external blobstore.</p>
+You can deploy the Small Footprint Elastic Runtime tile with a minimum of four VMs, listed in the left column of the table below. Optionally, you can deploy the additional VMs in the right column. 
 
-* [Control VM](#controlvm)
-* [Compute VM](#computevm)
-* [Database VM](#dbvm)
-* [Router VM](#router)
+<p class="note"><strong>Note</strong>: The following table assumes that you are using an external blobstore.</p>
 
-Optionally, you can deploy the following additional VMs:
+<table>
+	<tr>
+		<th>Minimum Required VMs</th>
+		<th>Optional VMs</th>
+	</tr>
+	<tr>
+		<td style="width:50%">
+			<ul>
+			<li><a href="#controlvm">Control</a></li>
+			<li><a href="#computevm">Compute</a></li>
+			<li><a href="#dbvm">Database</a></li>
+			<li><a href="#router">Router</a></li>
+			</ul>
+		</td>
+		<td>
+			<ul>
+			<li><a href="#blob">File Storage</a></li>
+			<li><a href="#tcprouter">TCP Router</a></li>
+			<li><a href="#haproxy">HAProxy</a></li>
+			<li><a href="#mysqlbackup">MySQL Backup Prepare Node</a></li>
+			<li><a href="#mysqlmonitor">MySQL Monitor</a></li>
+			</ul>
+		</td>
+	</tr>
+</table>
 
-* [Blobstore VM](#blob)
-* [TCP Router VM](#tcprouter)
-* [HAProxy VM](#haproxy)
-* [MySQL Backup Prepare Node](#mysqlbackup)
-* [MySQL Monitor](#mysqlmonitor)
 
 See the sections below for more information about the processes that run on each VM. 
 
