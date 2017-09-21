@@ -5,7 +5,7 @@ owner: Releng
 
 This topic describes the component VMs included in the Pivotal Cloud Foundry (PCF) Small Footprint Elastic Runtime tile, as well as the processes that run on each VM. 
 
-For more information about the components mentioned on this page, see [Cloud Foundry Components](../concepts/architecture.html). 
+For more information about the components mentioned on this page, see the _Architecture_ section of the [Elastic Runtime Concepts](../concepts/index.html) guide. 
 
 ## <a id='overview'></a>Overview
 
@@ -38,39 +38,54 @@ You can deploy the Small Footprint Elastic Runtime tile with a minimum of four V
 		</td>
 	</tr>
 </table>
-<sup><b>*</b></sup>These VMs include co-located jobs that normally run on a single VM in Elastic Runtime. See the next section for information on which jobs run on which VM.  
+<sup><b>*</b></sup>These VMs include co-located jobs that normally run on a single VM in Elastic Runtime. See the next section for details.  
 
 
 ## <a id='vms'></a>VMs with Co-located Jobs
 
-To reduce the amount of VMs necessary for Small Footprint Elastic Runtime, the tile co-locates jobs many onto _Control_ and _Database_ VMs. 
+To reduce the amount of VMs necessary for Small Footprint Elastic Runtime, the _Control_ and _Database_ VMs include co-located jobs. 
 
 ### <a id='controlvm'></a>Control
 
+The Control VM includes the Elastic Runtime jobs that handle management plane operations, app lifecycles, logging, and user authorization and authentication. Additionally, all errands run on the Control VM, which eliminates the need to spin up a VM for each errand and significantly reduces the amount of time it takes to run errands.  
 
-* Diego BBS
-* UAA
-* Diego Brain
-* Cloud Controller
-* Clock Global
-* Cloud Controller Worker
-* Doppler Server
-* Loggregator Traficcontroller
-* Syslog Adapter
-* Syslog Scheduler
-
-Errands run on control VM instead of spinning up new VM. 
-
-* Smoke Test Errand
-* Apps Manager Errand
-* Notifications Errand
-* Notifications UI Errand
-* Pivotal Account Errand
-* Autoscaling Errand
-* Autoscaling Registration Errand
-* NFS Broker Errand
-* MySQL Bootstrap Errand
-* MySQL Rejoin Unsafe Errand
+<table>
+	<tr>
+	<th colspan="2">
+	Jobs on Control VM
+	</th>
+	</tr>
+	<tr>
+	  	<td>
+	  	<ul>
+	  	<li>Diego BBS</li>
+		<li>UAA</li>
+		<li>Diego Brain</li>
+		<li>Cloud Controller</li>
+		<li>Clock Global</li>
+		<li>Cloud Controller Worker</li>
+		<li>Doppler Server</li>
+		<li>Loggregator Traficcontroller</li>
+		<li>Syslog Adapter</li>
+		<li>Syslog Scheduler</li>
+		</ul>
+		</td>
+		<td>
+		<ul>
+	  	<li>Smoke Test Errand</li>
+		<li>Apps Manager Errand</li>
+		<li>Notifications Errand</li>
+		<li>Notifications UI Errand</li>
+		<li>Pivotal Account Errand</li>
+		<li>Autoscaling Errand</li>
+		<li>Autoscaling Registration Errands</li>
+		<li>NFS Broker Errand</li>
+		<li>MySQL Bootstrap Errand</li>
+		<li>MySQL Rejoin Unsafe Errand</li>
+		</ul>
+		</td>
+	</tr>
+</table> 
 
 ### <a id='dbvm'></a>Database
 
