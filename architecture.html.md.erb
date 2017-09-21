@@ -49,14 +49,16 @@ To reduce the amount of VMs necessary for Small Footprint Elastic Runtime, the _
 
 The Control VM includes the Elastic Runtime jobs that handle management plane operations, app lifecycles, logging, and user authorization and authentication. Additionally, all errands run on the Control VM, which eliminates the need to spin up a VM for each errand and significantly reduces the amount of time it takes to run errands.  
 
+The following table lists all jobs running on the Control VM. 
+
 <table>
 	<tr>
-	<th colspan="2">
+	<th colspan="2" style="text-align: center">
 	Jobs on Control VM
 	</th>
 	</tr>
 	<tr>
-	  	<td>
+	  	<td style="width:50%">
 	  	<ul>
 	  	<li>Diego BBS</li>
 		<li>UAA</li>
@@ -89,7 +91,28 @@ The Control VM includes the Elastic Runtime jobs that handle management plane op
 
 ### <a id='dbvm'></a>Database
 
-* NATS
-* MySQL Proxy
-* MySQL Server
-* Consul
+The database VM includes the Elastic Runtime jobs that handle internal storage and messaging. 
+
+The following table lists all jobs running on the Database VM. 
+
+<table>
+	<tr>
+	<th colspan="2" style="text-align: center">
+	Jobs on Database VM
+	</th>
+	</tr>
+	<tr>
+	  	<td style="width:50%">
+	  	<ul>
+	  	<li>NATS</li>
+		<li>Consul</li>
+		</ul>
+		</td>
+		<td>
+		<ul>
+	  	<li>MySQL Proxy</li>
+		<li>MySQL Server</li>
+		</ul>
+		</td>
+	</tr>
+</table> 
