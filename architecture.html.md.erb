@@ -19,28 +19,34 @@ You can deploy the Small Footprint Elastic Runtime tile with a minimum of four V
 	<tr>
 		<td style="width:50%">
 			<ul>
-			<li><a href="#controlvm">Control</a></li>
-			<li><a href="#computevm">Compute</a></li>
-			<li><a href="#dbvm">Database</a></li>
-			<li><a href="#router">Router</a></li>
+			<li>Compute (Diego Cell)</li>
+			<li><a href="#controlvm">Control</a><sup><b>*</b></sup></li>
+			<li><a href="#dbvm">Database</a><sup><b>*</b></sup></li>
+			<li>Router</li>
 			</ul>
 		</td>
 		<td>
 			<ul>
-			<li><a href="#blob">File Storage</a></li>
-			<li><a href="#tcprouter">TCP Router</a></li>
-			<li><a href="#haproxy">HAProxy</a></li>
-			<li><a href="#mysqlbackup">MySQL Backup Prepare Node</a></li>
-			<li><a href="#mysqlmonitor">MySQL Monitor</a></li>
+			<li>File Storage</li>
+			<li>HAProxy</li>
+			<li>MySQL Backup Prepare Node</li>
+			<li>MySQL Monitor</li>
+			<li>TCP Router</li>
 			</ul>
 		</td>
 	</tr>
 </table>
+<sup><b>*</b></sup>These VMs include co-located jobs that normally run on a single VM in Elastic Runtime. 
 
 
 See the sections below for more information about the processes that run on each VM. 
 
-## <a id='controlvm'></a>Control VM
+
+## <a id='vms'></a>VMs with Co-located Jobs
+
+To reduce the amount of VMs necessary for Small Footprint Elastic Runtime, the tile co-locates jobs many onto _Control_ and _Database_ VMs. 
+
+### <a id='controlvm'></a>Control
 
 * Diego BBS
 * UAA
@@ -66,37 +72,9 @@ Errands run on control VM instead of spinning up new VM.
 * MySQL Bootstrap Errand
 * MySQL Rejoin Unsafe Errand
 
-## <a id='dbvm'></a>Database VM
+### <a id='dbvm'></a>Database
 
 * NATS
 * MySQL Proxy
 * MySQL Server
 * Consul
-
-## <a id='computevm'></a>Compute VM
-
-* Diego Cell
-
-## <a id='blob'></a>Blobstore VM (single point of failure, needs to be able to scale)
-
-* File Storage
-
-## <a id='router'></a>Router VM
-
-* Router
-
-## <a id='tcprouter'></a>TCP Router VM
-
-* TCP Router
-
-## <a id='haproxy'></a> (Optional) HAProxy VM
-
-* HAProxy
-
-## <a id='mysqlbackup'></a> Backup Prepare Node
-
-* Backup Prepare Node 
-
-## <a id='mysqlmonitor'></a> MySQL Monitor
-
-* MySQL Monitor
