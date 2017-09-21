@@ -3,6 +3,27 @@ title: Product Architecture for Small Footprint Elastic Runtime
 owner: Releng
 ---
 
+## <a id='vms'></a>VMs
+
+The Small Footprint Elastic Runtime tile can deploy with a minimum of the following four VMs:
+
+<p class="note"><strong>Note</strong>: The following list assumes that you are using an external blobstore.</p>
+
+* [Control VM](#controlvm)
+* [Compute VM](#computevm)
+* [Database VM](#dbvm)
+* [Router VM](#router)
+
+Optionally, you can deploy the following additional VMs:
+
+* [Blobstore VM](#blob)
+* [TCP Router VM](#tcprouter)
+* [HAProxy VM](#haproxy)
+* [MySQL Backup Prepare Node](#mysqlbackup)
+* [MySQL Monitor](#mysqlmonitor)
+
+See the sections below for more information about the processes that run on each VM. 
+
 ## <a id='controlvm'></a>Control VM
 
 * Diego BBS
@@ -40,7 +61,7 @@ Errands run on control VM instead of spinning up new VM.
 
 * Diego Cell
 
-## <a id='computevm'></a>Blobstore VM (single point of failure, needs to be able to scale)
+## <a id='blob'></a>Blobstore VM (single point of failure, needs to be able to scale)
 
 * File Storage
 
@@ -48,7 +69,7 @@ Errands run on control VM instead of spinning up new VM.
 
 * Router
 
-## <a id='router'></a>TCP Router VM
+## <a id='tcprouter'></a>TCP Router VM
 
 * TCP Router
 
