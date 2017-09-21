@@ -5,53 +5,61 @@ owner: Releng
 
 ## <a id='controlvm'></a>Control VM
 
-Diego BBS
-UAA
-Diego Brain
-Cloud Controller
-Clock Global
-Cloud Controller Worker
-Doppler Server
-Loggregator Traficcontroller
-Syslog Adapter
-Syslog Scheduler
+* Diego BBS
+* UAA
+* Diego Brain
+* Cloud Controller
+* Clock Global
+* Cloud Controller Worker
+* Doppler Server
+* Loggregator Traficcontroller
+* Syslog Adapter
+* Syslog Scheduler
+
+Errands run on control VM instead of spinning up new VM. 
+
+* Smoke Test Errand
+* Apps Manager Errand
+* Notifications Errand
+* Notifications UI Errand
+* Pivotal Account Errand
+* Autoscaling Errand
+* Autoscaling Registration Errand
+* NFS Broker Errand
+* MySQL Bootstrap Errand
+* MySQL Rejoin Unsafe Errand
 
 ## <a id='dbvm'></a>Database VM
 
-NATS
-MySQL Proxy
-MySQL Server
-Consul
+* NATS
+* MySQL Proxy
+* MySQL Server
+* Consul
 
 ## <a id='computevm'></a>Compute VM
 
-Diego Cell
+* Diego Cell
 
-## <a id='computevm'></a>Blobstore VM
+## <a id='computevm'></a>Blobstore VM (single point of failure, needs to be able to scale)
 
-File Storage
+* File Storage
 
 ## <a id='router'></a>Router VM
 
-Router
+* Router
+
+## <a id='router'></a>TCP Router VM
+
+* TCP Router
 
 ## <a id='haproxy'></a> (Optional) HAProxy VM
 
-HAProxy
+* HAProxy
 
------------------------------------
+## <a id='mysqlbackup'></a> Backup Prepare Node
 
-Backup Prepare Node
-MySQL Monitor
-TCP Router
+* Backup Prepare Node 
 
-Smoke Test Errand
-Apps Manager Errand
-Notifications Errand
-Notifications UI Errand
-Pivotal Account Errand
-Autoscaling Errand
-Autoscaling Registration Errand
-NFS Broker Errand
-MySQL Bootstrap Errand
-MySQL Rejoin Unsafe Errand
+## <a id='mysqlmonitor'></a> MySQL Monitor
+
+* MySQL Monitor
