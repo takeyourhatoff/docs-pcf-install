@@ -15,14 +15,18 @@ owner: releng
 
 <p class="note warning">
 <strong>IMPORTANT: </strong>
-The Small Footprint Elastic Runtime for PCF tile is currently in development and not yet available.
+The Small Footprint Elastic Runtime for PCF tile is currently in Alpha.
 </p>
 
 This documentation describes the Small Footprint Elastic Runtime tile for Pivotal Cloud Foundry (PCF). 
 
 ## <a id='overview'></a>Overview
 
-A standard, highly available Elastic Runtime deployment has over 30 VMs and  requires [50 or more instances](https://docs.pivotal.io/pivotalcf/1-12/customizing/aws.html#aws). Some resource-constrained environments that run smaller workloads can benefit from an Elastic Runtime deployment with a minimal footprint. The Small Footprint Elastic Runtime tile condenses the required jobs onto only four VMs. 
+A standard, highly available Elastic Runtime deployment has over 31 VMs and  requires [50 or more instances](https://docs.pivotal.io/pivotalcf/1-12/customizing/aws.html#aws). Some resource-constrained environments that run smaller workloads can benefit from an Elastic Runtime deployment with a minimal footprint. The Small Footprint Elastic Runtime tile condenses the required jobs onto only four VMs. 
+
+The following image compares the number of VMs deployed by Elastic Runtime and Small Footprint Elastic Runtime. 
+
+![ERT VMs](ert-vms.png)
 
 See the sections below for a list of [use cases](#usecase) and links to [additional documentation](#docs). 
 
